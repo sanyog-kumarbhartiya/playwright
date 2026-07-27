@@ -2,12 +2,12 @@ const { test, expect } = require('@playwright/test');
 
 test('Amazon Login - Enter Email and Continue', async ({ page }) => {
 
-    // Open Amazon India
+    
     await page.goto('https://www.amazon.in');
 
     await page.locator('#nav-link-accountList').click();
 
-    // Navigate to Sign-In page
+
     await page.locator('#nav-link-accountList-nav-line-1');
 
     // Wait for the email input
@@ -27,4 +27,6 @@ test('Amazon Login - Enter Email and Continue', async ({ page }) => {
 
     await page.locator('#ap_password').click();
     await page.locator('#ap_password').fill('Sanyog@9682446689');
+
+    await page.locator('#signInSubmit').click();
 });
