@@ -29,4 +29,6 @@ test('Amazon Login - Enter Email and Continue', async ({ page }) => {
     await page.locator('#ap_password').fill('Sanyog@9682446689');
 
     await page.locator('#signInSubmit').click();
+
+    await page.waitForTimeout(5000);
 });
