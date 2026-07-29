@@ -5,12 +5,14 @@ const { test } = require('@playwright/test');
 const LoginPage = require('../pages/LoginPage');
 const SearchPage = require('../pages/SearchPage');
 const ProductPage = require('../pages/ProductPage');
+const DetailProductPage = require('../pages/DetailProductPage');
 
 test('Amazon Login and Search', async ({ page }) => {
 
     const login = new LoginPage(page);
     const search = new SearchPage(page);
     const product = new ProductPage(page);
+    
 
     await login.openAmazon();
 
@@ -24,6 +26,10 @@ test('Amazon Login and Search', async ({ page }) => {
     await search.searchProduct("watch");
     await page.waitForTimeout(5000);
 
-    await product.openProduct();
+    const result = await product.getFirstProductDetails();
+
+const details = new DetailProductPage(result.newPage);
+
+await details.ProductDetails();
 
 });

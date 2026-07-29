@@ -6,6 +6,7 @@ class SearchPage {
 
         this.searchBox = '#twotabsearchtextbox';
         this.searchButton = '#nav-search-submit-button';
+        this.firstProduct = '[data-component-type="s-search-result"]';
     }
 
     async searchProduct(product) {
