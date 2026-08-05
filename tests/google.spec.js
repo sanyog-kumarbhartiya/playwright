@@ -8,6 +8,7 @@ test('open google page & check title', async({page})=>
 
     const pageUrl = page.url()
     console.log("page url is :", pageUrl)
+    await expect(page).toHaveTitle(/Google/);
 }
    
 )
