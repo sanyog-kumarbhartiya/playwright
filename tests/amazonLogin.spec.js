@@ -31,4 +31,6 @@ test('Amazon Login - Enter Email and Continue', async ({ page }) => {
     await page.locator('#signInSubmit').click();
 
     await page.waitForTimeout(5000);
+
+    await page.locator('#twotabsearchtextbox').click().fill('watch')
 });

@@ -13,5 +13,8 @@ test('Locators',async({page})=>{
 
     await expect(page.locator('.title')).toContainText('Products');
 
+    const productElement = page.locator('.title')
+    await expect(productElement).toBeVisible()
+
 
 })
