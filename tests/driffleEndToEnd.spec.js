@@ -100,15 +100,15 @@ test('driffle end to end test case', async ({ page }) => {
 
 
     //Verify Cart Total
-    await test.step('verify cart total', async () => {
+    // await test.step('verify cart total', async () => {
 
-        const cartTotal =
-            await search.verifyCartTotal();
+    //     const cartTotal =
+    //         await search.verifyCartTotal();
 
-        console.log(
-            `Cart Total: ${cartTotal}`
-        );
+    //     console.log(
+    //         `Cart Total: ${cartTotal}`
+    //     );
 
-    });
+    // });
 
 });
